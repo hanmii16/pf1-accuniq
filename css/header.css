@@ -46,6 +46,7 @@ header div.wrap ul.gnb li {
 }
 header div.wrap ul.gnb li a {
   padding: 10px 20px;
+  font-weight: bold;
 }
 header div.wrap ul.gnb li a:hover {
  color: #f0c77b;

@@ -18,7 +18,10 @@
   height: 100%;
 }
 #title .wrap hgroup {
-  /*! perspective: 400px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 140px;
 }
 #title .wrap hgroup h2 {
   animation-name: fliph2;
@@ -27,6 +30,8 @@
   animation-direction: reverse;
   backface-visibility: hidden;
   width: fit-content;
+  color: #3abcee;
+  font-weight: bold;
 }
 @keyframes fliph2{
   0%{
@@ -45,6 +50,8 @@
   width: fit-content;
   animation-delay: 0.5s;
   transform:rotateY(-90deg);
+  font-weight: bold;
+  line-height: 1.2;
 }
 @keyframes fliph3{
   0%{

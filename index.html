@@ -78,6 +78,22 @@
                 
         });
     </script>
+     <!-- slick -->
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('.productS').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots:true,
+                arrows:true,
+                speed: 300
+            });
+        });
+     </script>
 </head>
 <body>
     <!-- 상단영역 -->
@@ -147,7 +163,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="pdetail">
+                <div class="productS pdetail">
                     <article>
                         <hgroup>
                             <h3 class="h3">ACCUNIQ</h3>
@@ -194,10 +210,10 @@
                 </span>
                 <ul class="flex">
                     <li><img src="img/connect_img01.png" alt="채성분측정결과"></li>
-                    <li><img src="img/connect_img01.png" alt="채수분분석"></li>
-                    <li><img src="img/connect_img01.png" alt="단백질"></li>
-                    <li><img src="img/connect_img01.png" alt="채성분자료"></li>
-                    <li><img src="img/connect_img01.png" alt="내장지방단면적"></li>
+                    <li><img src="img/connect_img02.png" alt="채수분분석"></li>
+                    <li><img src="img/connect_img03.png" alt="단백질"></li>
+                    <li><img src="img/connect_img04.png" alt="채성분자료"></li>
+                    <li><img src="img/connect_img05.png" alt="내장지방단면적"></li>
                 </ul>
             </div>
         </section>
