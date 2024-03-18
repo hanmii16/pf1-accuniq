@@ -27,31 +27,14 @@
     <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function(){
-                // header에 클래스를 붙이시오(fixed)
-                //$().addClass();
-                //$("").addClass();
-                //$("header").addClass();
                 //$("header").addClass("fixed");
                 $("header").addClass("fixed");
 
-                //header태그안의 h1를 클릭하면 실행하시오
-                //$().click();
-                //$("").click();
-                //$("선택자").click();
-                //$("header h1").click();
-                /*
-                    $("header h1").click(
-                        function(){
-
-                        }
-                    );
-                */
                 $("header h1").click(
                     function(){
 
                     }
                 );
-
                 //대메뉴에 클래스를 붙이시오(opacity0)
                 //$("header div.wrap ul.gnb").addClass("opacity0");
                 //햄버거버튼을 클릭하면 실행하시오(대메뉴에 클래스를 없애시오(opacity0))
@@ -75,7 +58,12 @@
                     $(this).toggleClass("upbg"); // this 클릭한 요소를 의미한다
                     return false;
                 });
-                
+                // GNB HOVER
+                $("header div.wrap ul.gnb li a").hover(function(){
+                    wsubN=$(this).parent().index()+1;
+                    $("").fadeIn()
+                });
+                    
         });
     </script>
      <!-- slick -->
@@ -90,7 +78,17 @@
                 slidesToScroll: 1,
                 dots:true,
                 arrows:true,
-                speed: 300
+                fade:true
+            });
+            $('.connectS').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots:true,
+                centerMode: true,
+                centerPadding: '100px',
+                autoplay: true,
+                autoplaySpeed: 4000
             });
         });
      </script>
@@ -122,6 +120,39 @@
                     <span></span>
                     <span></span>
                 </a>
+            </div>
+            <div class="wgnb">
+                <div class="sub1">
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">회사연혁</a></li>
+                        <li><a href="">주요 인증 및 수상내역</a></li>
+                        <li><a href="">BI 소개</a></li>
+                        <li><a href="">글로벌네트워크</a></li>
+                        <li><a href="">오시는길</a></li>
+                    </ul>
+                </div>
+                <div class="sub2">
+                    <ul>
+                        <li><a href="">임피던스 체지방측정기</a></li>
+                        <li><a href="">자동전자혈압계</a></li>
+                        <li><a href="">소프트웨어</a></li>
+                        <li><a href="">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="sub3">  
+                    <ul>
+                        <li><a href="">다운로드 자료실</a></li>
+                        <li><a href="">자주 몯는 질문</a></li>
+                    </ul>
+                </div>
+                <div class="sub4">
+                    <ul>
+                        <li><a href="">구입문의</a></li>
+                        <li><a href="">제품 서비스 문의</a></li>
+                        <li><a href="">제휴/협력/기술문의</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <a href="" class="updown">닫기</a>
@@ -195,7 +226,7 @@
             </div>
         </section>
         <!-- connect -->
-        <section id="connect" class="paddingT50 paddingB50 marginT50  marginB50">
+        <section id="connect" class="paddingT50 paddingB50">
             <div class="wrap grid24">
                 <h2 class="h4">
                     ACCUNIQ
@@ -208,7 +239,7 @@
                     <a href="" class="block"><img src="img/google.png" alt="구글앱스토어"></a>
                     <a href="" class="block"><img src="img/apple.png" alt="애플앱스토어"></a>
                 </span>
-                <ul class="flex">
+                <ul class="connectS flex">
                     <li><img src="img/connect_img01.png" alt="채성분측정결과"></li>
                     <li><img src="img/connect_img02.png" alt="채수분분석"></li>
                     <li><img src="img/connect_img03.png" alt="단백질"></li>
@@ -218,7 +249,7 @@
             </div>
         </section>
         <!-- 대시보드 -->
-        <section id="dashboard" class="paddingT50 paddingB50 marginT50  marginB50">
+        <section id="dashboard" class="paddingT50 paddingB50">
             <div class="wrap grid24">
                 <h2 class="h4">
                     ACCUNIQ
@@ -412,7 +443,7 @@
                     </li>
                 </ul>
                 <select name="" id="">
-                    <option value="">family site</option>
+                    <option value="">Family site</option>
                     <option value="">셀바스에이아이</option>
                     <option value="">셀바스헬스케어</option>
                     <option value="">힘스(HIMS)</option>
