@@ -40,7 +40,6 @@ header div.wrap h1 a::after{
 header div.wrap ul.gnb {
   align-items: center;
   transition: 0.5s;
-  opacity: 0;
 }
 header div.wrap ul.gnb li {
   
@@ -90,6 +89,7 @@ header .wrap .wgnb{
   left: calc(100%/2 - 318px);
   text-align: center;
   width: 50%;
+  
 }
 header .wrap .wgnb .sub1{
   
@@ -161,7 +161,7 @@ header .wrap .wgnb .sub5 ul li a{
 }
 
 header .updown{
-  width: 70px;
+/*   width: 70px;
   height: 30px;
   display: block;
   background-color: #ccc;
@@ -175,9 +175,10 @@ header .updown{
   background-image: url(../img/up-icon.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-}
-header .updown::before{
+  background-position: center; */
+  font-size: 0;
+} 
+/* header .updown::before{
   content: "";
   position: absolute;
   right: -50px;
@@ -187,7 +188,7 @@ header .updown::before{
 }
 .up{
   top:-90px;
-}
+} */
 .upbg{
   background-image: url(../img/down.svg) !important;
 }

@@ -27,51 +27,96 @@
     <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function(){
-                //$("header").addClass("fixed");
-                $("header").addClass("fixed");
+            // // 초기 로딩 시 모든 서브 메뉴 숨기기
+            // $("header .wgnb > div").hide();
 
-                $("header h1").click(
-                    function(){
+            // // Header에 고정 클래스 추가
+            // $("header").addClass("fixed");
 
+            // $("header h1").click(function(){
+            //     // 여기에 h1 클릭 시 필요한 작업을 추가
+            // });
+
+            // // 서브 메뉴 호버 이벤트를 관리하는 함수
+            // function toggleSubMenuHover(state) {
+            //     if (state) {
+            //         // 호버 이벤트 활성화
+            $("header .wrap .wgnb").stop().hide();
+            $("header .wrap .gnb li a").hover(function() {
+                var index = $(this).parent().index() + 1; // Lấy chỉ số của phần tử li chứa a
+                $("header .wrap .wgnb").show();
+                $("header .wrap .wgnb .sub" + index).stop().slideDown();
+                
+            }, function() {
+                var index = $(this).parent().index() + 1; // Lấy chỉ số của phần tử li chứa a
+                $("header .wrap .wgnb .sub" + index).stop().slideUp();
+                
+            });
+            // $("header .wrap .wgnb .sub" + index).mouseenter(function(){
+            //     $(this).stop().slideDown();
+            // });
+            $("header .wrap .wgnb .sub1").on({
+                mouseenter: function () {
+                    $(this).stop().slideDown();
+                },
+                mouseleave: function (e) {
+                    // Kiểm tra xem con chuột đã rời khỏi phần tử con của .sub1 hay không
+                    if (!$(this).is(e.relatedTarget) && !$(e.relatedTarget).closest('.sub1').length) {
+                        $(this).stop().slideUp();
                     }
-                );
-                //대메뉴에 클래스를 붙이시오(opacity0)
-                //$("header div.wrap ul.gnb").addClass("opacity0");
-                //햄버거버튼을 클릭하면 실행하시오(대메뉴에 클래스를 없애시오(opacity0))
-                $("header div.wrap div.right > a.ham").click(
-                    function(){
-                        //$("header div.wrap ul.gnb").addClass("opacity1");
-                        $("header div.wrap ul.gnb").toggleClass("opacity1");
-                        //햄버거에 클래스를 붙여라(x)
-                        //$('header div.wrap div.right > a.ham').addClass("x");
-                        $('header div.wrap div.right > a.ham').toggleClass("x");
-                        return false;
-                    }
-                );
-                // 대메뉴 닫기
-                //닫기를 클릭하면 실행하시오
-                $("header .updown").click(function(){
-                    //header에 클래스붙이시오(up)
-                    $("header").toggleClass("up");
-                    //닫기에 클래스를 붙이시오(upbg)
-                    //$("header .updown").toggleClass("upbg");
-                    $(this).toggleClass("upbg"); // this 클릭한 요소를 의미한다
-                    return false;
-                });
-                // GNB HOVER
-                    $("header .wrap .gnb li").hover(function(){
-                        var index = $(this).index() + 1;
-                        $("header .wrap .wgnb .sub" + index).stop(true, true).slideDown();
-                        $("header .wrap .wgnb .sub" + index).stop(true, true).siblings().slideUp();
-                    // }, function() {
-                        // $("header .wrap .wgnb .sub").slideUp();
-                    });
-                    $("header .wrap .gnb li").mouseleave(function(){
-                        $("header .wrap .wgnb .sub" + index).slideUp();
-                    });
-            
-           
+                }
+            });
+
+
+
+            $("footer a.top").click(function(){
+                $("html,body").animate({scrollTop:0},1000);
+                return false;
+            });
+
+            //         $("header .wrap .gnb li:nth-child(4)").hover(function() {
+            //             $("header .wrap .wgnb .sub5").hide();
+            //         });
+
+            //         $("header .wrap .gnb li:nth-child(5)").hover(function() {
+            //             $("header .wrap .wgnb .sub5").slideDown();
+            //         }, function() {
+            //             $("header .wrap .wgnb .sub5").slideUp();
+            //         });
+            //     } else {
+            //         // 호버 이벤트 비활성화를 위해 기존의 이벤트를 제거
+            //         $("header .wrap .gnb li").off("mouseenter mouseleave");
+            //         $("header .wrap .gnb li:nth-child(4)").off("mouseenter mouseleave");
+            //         $("header .wrap .gnb li:nth-child(5)").off("mouseenter mouseleave");
+            //     }
+            // }
+
+            // // 호버 이벤트 초기 상태는 비활성화
+            // toggleSubMenuHover(false);
+
+            // // 햄버거 메뉴 클릭 이벤트
+            // $("header div.wrap div.right > a.ham").click(function(){
+            //     $("header div.wrap ul.gnb").toggleClass("opacity1");
+            //     $('header div.wrap div.right > a.ham').toggleClass("x");
+
+            //     // 햄버거 메뉴가 활성화된 상태라면 호버 이벤트를 활성화, 아니면 비활성화
+            //     if ($('header div.wrap div.right > a.ham').hasClass("x")) {
+            //         toggleSubMenuHover(true);
+            //     } else {
+            //         toggleSubMenuHover(false);
+            //     }
+
+            //     return false; // 기본 이벤트 방지
+            // });
+
+            // // 메뉴 닫기 버튼 클릭 이벤트
+            // $("header .updown").click(function(){
+            //     $("header").toggleClass("up");
+            //     $(this).toggleClass("upbg"); // 클릭한 요소에 대한 처리
+            //     return false; // 기본 이벤트 방지
+            // });
         });
+
     </script>
      <!-- slick -->
      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
