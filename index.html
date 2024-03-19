@@ -27,20 +27,8 @@
     <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function(){
-            // // 초기 로딩 시 모든 서브 메뉴 숨기기
-            // $("header .wgnb > div").hide();
-
-            // // Header에 고정 클래스 추가
-            // $("header").addClass("fixed");
-
-            // $("header h1").click(function(){
-            //     // 여기에 h1 클릭 시 필요한 작업을 추가
-            // });
-
-            // // 서브 메뉴 호버 이벤트를 관리하는 함수
-            // function toggleSubMenuHover(state) {
-            //     if (state) {
-            //         // 호버 이벤트 활성화
+            
+            //GNB MENU HOVER
             $("header .wrap .wgnb").stop().hide();
             $("header .wrap .gnb li a").hover(function() {
                 var index = $(this).parent().index() + 1; // Lấy chỉ số của phần tử li chứa a
@@ -52,9 +40,7 @@
                 $("header .wrap .wgnb .sub" + index).stop().slideUp();
                 
             });
-            // $("header .wrap .wgnb .sub" + index).mouseenter(function(){
-            //     $(this).stop().slideDown();
-            // });
+           
             $("header .wrap .wgnb .sub1").on({
                 mouseenter: function () {
                     $(this).stop().slideDown();
@@ -66,34 +52,11 @@
                     }
                 }
             });
-
-
-
+            //TOP BUTTON CLICK
             $("footer a.top").click(function(){
                 $("html,body").animate({scrollTop:0},1000);
                 return false;
             });
-
-            //         $("header .wrap .gnb li:nth-child(4)").hover(function() {
-            //             $("header .wrap .wgnb .sub5").hide();
-            //         });
-
-            //         $("header .wrap .gnb li:nth-child(5)").hover(function() {
-            //             $("header .wrap .wgnb .sub5").slideDown();
-            //         }, function() {
-            //             $("header .wrap .wgnb .sub5").slideUp();
-            //         });
-            //     } else {
-            //         // 호버 이벤트 비활성화를 위해 기존의 이벤트를 제거
-            //         $("header .wrap .gnb li").off("mouseenter mouseleave");
-            //         $("header .wrap .gnb li:nth-child(4)").off("mouseenter mouseleave");
-            //         $("header .wrap .gnb li:nth-child(5)").off("mouseenter mouseleave");
-            //     }
-            // }
-
-            // // 호버 이벤트 초기 상태는 비활성화
-            // toggleSubMenuHover(false);
-
             // // 햄버거 메뉴 클릭 이벤트
             // $("header div.wrap div.right > a.ham").click(function(){
             //     $("header div.wrap ul.gnb").toggleClass("opacity1");
@@ -116,7 +79,6 @@
             //     return false; // 기본 이벤트 방지
             // });
         });
-
     </script>
      <!-- slick -->
      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
