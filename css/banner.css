@@ -4,6 +4,7 @@ section#banner {
   margin: 0 auto;
   height: auto;
   min-height: auto;
+  margin-top: 70px;
 }
 section#banner .wrap {
   

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/footer.css">
     <!-- 제이쿼리 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
     <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function(){
@@ -59,11 +59,18 @@
                     return false;
                 });
                 // GNB HOVER
-                $("header div.wrap ul.gnb li a").hover(function(){
-                    wsubN=$(this).parent().index()+1;
-                    $("").fadeIn()
-                });
-                    
+                    $("header .wrap .gnb li").hover(function(){
+                        var index = $(this).index() + 1;
+                        $("header .wrap .wgnb .sub" + index).stop(true, true).slideDown();
+                        $("header .wrap .wgnb .sub" + index).stop(true, true).siblings().slideUp();
+                    // }, function() {
+                        // $("header .wrap .wgnb .sub").slideUp();
+                    });
+                    $("header .wrap .gnb li").mouseleave(function(){
+                        $("header .wrap .wgnb .sub" + index).slideUp();
+                    });
+            
+           
         });
     </script>
      <!-- slick -->
@@ -121,7 +128,7 @@
                     <span></span>
                 </a>
             </div>
-            <div class="wgnb">
+            <div class="hide wgnb">
                 <div class="sub1">
                     <ul>
                         <li><a href="">회사소개</a></li>
@@ -146,7 +153,7 @@
                         <li><a href="">자주 몯는 질문</a></li>
                     </ul>
                 </div>
-                <div class="sub4">
+                <div class="sub5">
                     <ul>
                         <li><a href="">구입문의</a></li>
                         <li><a href="">제품 서비스 문의</a></li>
@@ -278,50 +285,65 @@
                 <ul class="flex">
                     <li>
                         <a href="" class="block borderR30">
-                            <h3 class="h4">BC380</h3>
-                            <p class="p">부위별 체지방량 및 근육량 분석하고 인체의 수분균형을 평가할 수 있는 스마트한 임피던스 체지방측정기</p>
+                            <h3 class="h4">BP600</h3>
+                            <p class="p">BP600은 대화면의 선명한 LCD를 탑재하여 시인성이 우수하며, 측정자의 혈압에 맞추어 유동성있게 가압하여 혈압 측정시에 통증이 적은 자동전자혈압계입니다.</p>
                         </a>
                     </li>
                     <li>
                         <a href="" class="block borderR30">
-                            <h3 class="h4">BC720</h3>
-                            <p class="p">위상각 측정, 세포외수분비분석, 6가지 주파수로 부위별 체성분 분석이 가능한 전문가용 고사양 임피던스 체지방측정기</p>
+                            <h3 class="h4">BP210</h3>
+                            <p class="p">ACCUNIQ BP210은 처음 혈압을 측정하는 사람들도 쉽게 사용할 수 있도록 설계, 혈압측정과 동시에 결과치를 프린터로 확인할 수 있는 자동전자혈압계</p>
                         </a>
                     </li>
                     <li>
                         <a href="" class="block borderR30">
-                            <h3 class="h4">BC300</h3>
-                            <p class="p">10 kg의 가벼운 제품 무게, 편리한 접이식 디자인, 전용 하드케이스를 이용한 손쉬운 이동 및 설치가 가능한 임피던스 체지방측정기</p>
+                            <h3 class="h4">BP250</h3>
+                            <p class="p">ACCUNIQ BP250은 원터치 기능 하나만으로 측정이 가능하며 결과지 출력은 물론 LCD 화면에서 측정 결과를 확인할 수 있는 자동전자혈압계</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block borderR30">
+                            <h3 class="h4">BP850</h3>
+                            <p class="p">ACCUNIQ BP850은 한번의 측정으로 양팔의 혈압을 측정하여 혈압 차이를 비교할 수 있는 자동전자혈압계</p>
                         </a>
                     </li>
                 </ul>
-                <div class="pdetail">
+                <div class="pdet">
                     <article>
                         <hgroup>
                             <h3 class="h3">ACCUNIQ</h3>
-                            <h4 class="h1">BC380</h4>
+                            <h4 class="h1">BP600</h4>
                         </hgroup>
-                        <p class="h4">부위별 체성분 측정이 가능한 임피던스 체지방측정기</p>
-                        <p class="p">부위별 체지방량 및 근육량 분석하고 인체의 수분균형을 평가할 수 있는 스마트한 임피던스 체지방측정기</p>
-                        <img src="img/prod1.png" alt="ACCUNIQ BC380">
+                        <p class="h4">선명한 대화면 LCD 탑재로 시인성이 우수하고 측정 정확도가 높은 자동전자혈압계</p>
+                        <p class="p">BP600은 대화면의 선명한 LCD를 탑재하여 시인성이 우수하며, 측정자의 혈압에 맞추어 유동성있게 가압하여 혈압 측정시에 통증이 적은 자동전자혈압계입니다.</p>
+                        <img src="img/BP600.png" alt="ACCUNIQ BP600">
                     </article>
                     <article>
                         <hgroup>
                             <h3 class="h3">ACCUNIQ</h3>
-                            <h4 class="h1">BC720</h4>
+                            <h4 class="h1">BP210</h4>
                         </hgroup>
-                        <p class="h4">전문가용 임피던스 체지방측정기</p>
-                        <p class="p">위상각 측정, 세포외수분비분석, 6가지 주파수로 부위별 체성분 분석이 가능한 전문가용 고사양 임피던스 체지방측정기</p>
-                        <img src="img/prod2.png" alt="ACCUNIQ BC720">
+                        <p class="h4">처음 혈압을 측정하는 사람들도 쉽게 사용할 수 있도록 설계된 가장 보편적인 제품</p>
+                        <p class="p">ACCUNIQ BP210은 처음 혈압을 측정하는 사람들도 쉽게 사용할 수 있도록 설계, 혈압측정과 동시에 결과치를 프린터로 확인할 수 있는 자동전자혈압계</p>
+                        <img src="img/BP210.png" alt="ACCUNIQ BP210">
                     </article>
                     <article>
                         <hgroup>
                             <h3 class="h3">ACCUNIQ</h3>
-                            <h4 class="h1">BC300</h4>
+                            <h4 class="h1">BP250</h4>
                         </hgroup>
-                        <p class="h4">이동이 편리한 접이식 임피던스 체지방측정기</p>
-                        <p class="p">10 kg의 가벼운 제품 무게, 편리한 접이식 디자인, 전용 하드케이스를 이용한 손쉬운 이동 및 설치가 가능한 임피던스 체지방측정기</p>
-                        <img src="img/prod3.png" alt="ACCUNIQ BC300">
+                        <p class="h4">컬러 LCD 스크린 화면, 휴대폰에서 QR 코드를 촬영하여 측정 결과를 확인이 가능한 제품</p>
+                        <p class="p">ACCUNIQ BP250은 원터치 기능 하나만으로 측정이 가능하며 결과지 출력은 물론 LCD 화면에서 측정 결과를 확인할 수 있는 자동전자혈압계</p>
+                        <img src="img/BP250.png" alt="ACCUNIQ BP250">
+                    </article>
+                    <article>
+                        <hgroup>
+                            <h3 class="h3">ACCUNIQ</h3>
+                            <h4 class="h1">BP850</h4>
+                        </hgroup>
+                        <p class="h4">양팔 측정 가능 자동전자혈압계</p>
+                        <p class="p">ACCUNIQ BP850은 한번의 측정으로 양팔의 혈압을 측정하여 혈압 차이를 비교할 수 있는 자동전자혈압계</p>
+                        <img src="img/BP850.png" alt="ACCUNIQ BP850">
                     </article>
                 </div>
             </div>

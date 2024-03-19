@@ -51,6 +51,7 @@ header div.wrap ul.gnb li a {
 }
 header div.wrap ul.gnb li a:hover {
  color: #f0c77b;
+ transition: 0.4s ease-in-out;
 }
 header div.wrap div.right {
   gap: 20px;
@@ -88,6 +89,7 @@ header .wrap .wgnb{
   top: 90px;
   left: calc(100%/2 - 318px);
   text-align: center;
+  width: 50%;
 }
 header .wrap .wgnb .sub1{
   
@@ -104,19 +106,21 @@ header .wrap .wgnb .sub1 ul li a{
   
   line-height: 2.5;
   color: #fff;
-  padding: 10px 15px;
 }
 header .wrap .wgnb .sub1 ul li a br{
   
 }
 header .wrap .wgnb .sub2{  
   background-color: #0059a9;
+  position: absolute;
+  left: 85px !important;
 }
 header .wrap .wgnb .sub2 ul{
   
 }
 header .wrap .wgnb .sub2 ul li{
   
+  padding: 0 20px;
 }
 header .wrap .wgnb .sub2 ul li a{
   
@@ -125,27 +129,33 @@ header .wrap .wgnb .sub2 ul li a{
 }
 header .wrap .wgnb .sub3{
   background-color: #0059a9;
+  position: absolute; 
+  left: 195px !important;
 }
 header .wrap .wgnb .sub3 ul{
   
 }
 header .wrap .wgnb .sub3 ul li{
   
+  padding: 0 25px;
 }
 header .wrap .wgnb .sub3 ul li a{ 
   line-height: 2.5;
   color: #fff;
 }
-header .wrap .wgnb .sub4{
+header .wrap .wgnb .sub5{
   background-color: #0059a9;
+  position: absolute;
+  left: 360px !important;
 }
-header .wrap .wgnb .sub4 ul{
+header .wrap .wgnb .sub5 ul{
   
 }
-header .wrap .wgnb .sub4 ul li{
+header .wrap .wgnb .sub5 ul li{
   
+  padding: 0 15px;
 }
-header .wrap .wgnb .sub4 ul li a{
+header .wrap .wgnb .sub5 ul li a{
   line-height: 2.5;
   color: #fff;
 }
