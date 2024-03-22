@@ -99,10 +99,30 @@
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 dots:true,
+                arrows:false,
                 centerMode: true,
-                centerPadding: '100px',
+                centerPadding: '20px',
                 autoplay: true,
                 autoplaySpeed: 4000
+            });
+            $('.dashboardS').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots:true,
+                arrows:false,
+                centerMode: true,
+                centerPadding: '60px',
+                autoplay: true,
+                autoplaySpeed: 4000
+            });
+            $('.product2S').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots:true,
+                arrows:true,
+                fade:true
             });
         });
      </script>
@@ -130,7 +150,6 @@
                     <li><a href="">한국어</a></li>
                 </ul>
                 <a href="" class="ham">
-                    <span></span>
                     <span></span>
                     <span></span>
                 </a>
@@ -185,7 +204,7 @@
     </div>
     <!-- 메인영역 -->
     <main class="paddingT50">
-        <section id="product" class="paddingT50 paddingB50 borderR30">
+        <section id="product" class="borderR30">
             <div class="wrap flex between">
                 <h2 class="hide">주요제품</h2>
                 <ul class="flex">
@@ -240,8 +259,9 @@
             </div>
         </section>
         <!-- connect -->
-        <section id="connect" class="paddingT50 paddingB50">
-            <div class="wrap grid24">
+        <section id="connect">
+            <div class="wrap">
+                <div class="left">
                 <h2 class="h4">
                     ACCUNIQ
                     <strong class="h1 block"> Connect</strong>
@@ -253,18 +273,21 @@
                     <a href="" class="block"><img src="img/google.png" alt="구글앱스토어"></a>
                     <a href="" class="block"><img src="img/apple.png" alt="애플앱스토어"></a>
                 </span>
-                <ul class="connectS flex">
-                    <li><img src="img/connect_img01.png" alt="채성분측정결과"></li>
-                    <li><img src="img/connect_img02.png" alt="채수분분석"></li>
-                    <li><img src="img/connect_img03.png" alt="단백질"></li>
-                    <li><img src="img/connect_img04.png" alt="채성분자료"></li>
-                    <li><img src="img/connect_img05.png" alt="내장지방단면적"></li>
-                </ul>
+                </div>
+                <div class="connectS right">
+                    <img src="img/connect_img01.png" alt="채성분측정결과">
+                    <img src="img/connect_img02.png" alt="채수분분석">
+                    <img src="img/connect_img03.png" alt="단백질">
+                    <img src="img/connect_img04.png" alt="채성분자료">
+                    <img src="img/connect_img05.png" alt="내장지방단면적">
+                
+                </div>
             </div>
         </section>
         <!-- 대시보드 -->
-        <section id="dashboard" class="paddingT50 paddingB50">
-            <div class="wrap grid24">
+        <section id="dashboard">
+            <div class="wrap">
+                <div class="left">
                 <h2 class="h4">
                     ACCUNIQ
                     <strong class="h1 block">Dashboard</strong>
@@ -279,14 +302,15 @@
                     <a href="" class="block"><img src="img/apple.png" alt="애플앱스토어"></a>
                     <a href="" class="block"><img src="img/web.png" alt="애플앱스토어"></a>
                 </span>
-                <ul class="flex">
-                    <li><img src="img/dash1.png" alt="채성분측정결과"></li>
-                    <li><img src="img/dash2.png" alt="채수분분석"></li>
-                </ul>
+                </div>
+                <div class="dashboardS right">
+                    <img src="img/dash1.png" alt="채성분측정결과">
+                    <img src="img/dash2.png" alt="채수분분석">
+                </div>
             </div>
         </section>
         <!-- product2 -->
-        <section id="product2" class="paddingT50 paddingB50 borderR30">
+        <section id="product2" class="borderR30">
             <div class="wrap flex between">
                 <h2 class="hide">주요제품</h2>
                 <ul class="flex">
@@ -315,7 +339,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="pdet">
+                <div class="product2S pdet">
                     <article>
                         <hgroup>
                             <h3 class="h3">ACCUNIQ</h3>

@@ -3,14 +3,13 @@ main{
 main section{
   height: 100vh;
   box-sizing: border-box;
-  min-height: 800px;
+  min-height: 600px;
 }
 section#product {
-  max-width: 1720px;
+  width: 1645px;
   margin: 0 auto;
   background-color: white;
   position: relative;
-  height: 600px;
 }
 section#product .wrap {
   
@@ -24,7 +23,8 @@ section#product .wrap h2 {
 section#product .wrap ul.flex {
   width: calc(100% / 2);
   flex-wrap: wrap;
-  gap: 60px;
+  padding-right: 60px;
+  padding-top: 90px;
 }
 section#product .wrap ul.flex li {
   width: 360px;
@@ -49,9 +49,29 @@ section#product .wrap ul li a {
 section#product .wrap ul li a:hover {
   box-shadow: 0px 0px 15px #ccc;
 }
-section#product .wrap ul li a::after{
+section#product .wrap ul li:nth-child(1) a::after{
   content: "";
   background-image: url(../img/prod1.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  width: 120px;
+  height: 180px;
+  display: inline-block;
+}
+section#product .wrap ul li:nth-child(2) a::after{
+  content: "";
+  background-image: url(../img/prod2.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  width: 120px;
+  height: 180px;
+  display: inline-block;
+}
+section#product .wrap ul li:nth-child(3) a::after{
+  content: "";
+  background-image: url(../img/prod3.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -70,7 +90,8 @@ section#product .wrap ul li a p {
 section#product .wrap .pdetail {
   width: calc(100% / 2);
   position: relative;
-  padding-left: 65px;
+  padding-left: 85px;
+  padding-top: 90px;
 }
 section#product .wrap .pdetail article {
   display: grid;
@@ -95,7 +116,7 @@ section#product .wrap .pdetail article hgroup h4 {
 section#product .wrap .pdetail article p.h4 {
   line-height: 1.3;
   font-weight: bold;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 section#product .wrap .pdetail article p.p {
   
@@ -107,7 +128,7 @@ section#product .wrap .pdetail article img {
 section#product .wrap .slick-dots{
   display: flex;
   position: absolute;
-  top: 350px;
+  bottom: 350px;
 }
 section#product .wrap .slick-dots li{
   
@@ -118,7 +139,7 @@ section#product .wrap .slick-dots li button{
 }
 section#product .wrap .slick-dots li button::before{
   
-  font-size: 10px;
+  font-size: 12px;
   color: #6c6767;
 }
 section#product .wrap .slick-prev{
@@ -147,4 +168,7 @@ section#product .wrap .slick-next{
 }
 section#product .wrap .slick-next::before{
   color: transparent;
+}
+section#product .slick-dots li.slick-active button:before{
+  color: #3abcee;
 }
