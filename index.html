@@ -29,7 +29,7 @@
         $(document).ready(function(){
             
             //GNB MENU HOVER
-            $("header .wrap .wgnb").stop().hide();
+            $("header .wrap .wgnb").hide();
             $("header .wrap .gnb li a").hover(function() {
                 var index = $(this).parent().index() + 1; // Lấy chỉ số của phần tử li chứa a
                 $("header .wrap .wgnb").show();
@@ -40,14 +40,13 @@
                 $("header .wrap .wgnb .sub" + index).stop().slideUp();
                 
             });
-           
-            $("header .wrap .wgnb .sub1").on({
+            $("header .wrap .wgnb .sub" + index).on({
                 mouseenter: function () {
                     $(this).stop().slideDown();
                 },
                 mouseleave: function (e) {
                     // Kiểm tra xem con chuột đã rời khỏi phần tử con của .sub1 hay không
-                    if (!$(this).is(e.relatedTarget) && !$(e.relatedTarget).closest('.sub1').length) {
+                    if (!$(this).is(e.relatedTarget) && !$(e.relatedTarget).closest('.sub').length) {
                         $(this).stop().slideUp();
                     }
                 }

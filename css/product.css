@@ -6,7 +6,7 @@ main section{
   min-height: 600px;
 }
 section#product {
-  width: 1645px;
+  max-width: 1645px;
   margin: 0 auto;
   background-color: white;
   position: relative;
